@@ -1,0 +1,5 @@
+Centre Bourdin;23;rue des Accassias;1
+Prorecycle;218;Avenue des ponts;8
+Revie;56;allee des Sycomores;2
+Deuxieme Vie;36;rue des grands espoirs;3
+Neo;78;Boulevard Jourdan;4
