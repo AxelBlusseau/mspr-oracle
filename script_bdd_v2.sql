@@ -1,42 +1,30 @@
--- création de séquences
-create sequence seq_typedechet start with 1 increment by 1;
-create sequence seq_marque start with 1 increment by 1;
-create sequence seq_modele start with 1 increment by 1;
-create sequence seq_site start with 1 increment by 1;
-create sequence seq_ville start with 1 increment by 1;
-create sequence seq_fonction start with 1 increment by 1;
-create sequence seq_employe start with 1 increment by 1;
-create sequence seq_tournee start with 1 increment by 1;
-create sequence seq_demande start with 1 increment by 1;
-create sequence seq_centre start with 1 increment by 1;
-
-
 -- les tables sans FK
 -- ==================
 
 create table fonction
-(noFonction	 number DEFAULT seq_fonction.NEXTVAL,
+(noFonction	 number(3) not null,
 nom		 varchar(50) not null,
 constraint PK_fonction primary key(noFonction)
 );
 
 create table ville
-(noVille 	 number DEFAULT seq_ville.NEXTVAL,
+(noVille 	 number(3) not null,
 ville		 varchar(50) not null,
 zip		 varchar(5) not null,
 constraint PK_ville primary key(noVille)
 );
 
 create table marque
-(noMarque	 number DEFAULT seq_marque.NEXTVAL,
+(noMarque	 number(3) not null,
 nom		 varchar(50) not null,
 constraint PK_marque primary key(noMarque)
 );
 
 create table typedechet
-(noTypeDechet	 number DEFAULT seq_typedechet.NEXTVAL,
+(noTypeDechet	 number(3) not null,
 nomTypeDechet	 varchar(50),
 nivDanger	 number(1),
+volumeUnitaire	 number(3),
 seuil		 varchar(20),
 tarifForfaitaire number(5),
 tarifLot	 number(5),
@@ -59,7 +47,7 @@ constraint FK_entreprise_ville foreign key (noVille) references ville(noVille)
 );
 
 create table centretraitement
-(noCentre	 number DEFAULT seq_centre.NEXTVAL,
+(noCentre	 number(3) not null,
 nomCentre	 varchar(100),
 noRueCentre	 number(3),
 rueCentre	 varchar(200),
@@ -69,7 +57,7 @@ constraint FK_centretraitement_ville foreign key (noVille) references ville(noVi
 );
 
 create table site
-(noSite		 number DEFAULT seq_site.NEXTVAL,
+(noSite		 number(3) not null,
 nom		 varchar(100) not null,
 noVille		 number(3) not null,
 constraint PK_site primary key(noSite),
@@ -77,7 +65,7 @@ constraint FK_site_ville foreign key (noVille) references ville(noVille)
 );
 
 create table employe
-(noEmploye	 number DEFAULT seq_employe.NEXTVAL,
+(noEmploye	 number(5) not null,
 nom		 varchar(50),
 prenom		 varchar(50),
 dateNaiss	 date,
@@ -92,7 +80,7 @@ constraint FK_employe_site foreign key (noSite) references site(noSite)
 );
 
 create table modele
-(noModele	 number DEFAULT seq_modele.NEXTVAL,
+(noModele	 number(3) not null,
 nom		 varchar(50),
 noMarque	 number(3) not null,
 constraint PK_modele primary key(noModele),
@@ -103,6 +91,7 @@ create table camion
 (noImmatric	 char(10) not null,
 dateAchat	 date,
 noModele 	 number(3) not null,
+volume		 number(3),
 noSite		 number(3) not null,
 constraint PK_camion primary key(noImmatric),
 constraint FK_camion_modele foreign key (noModele) references modele(noModele),
@@ -110,7 +99,7 @@ constraint FK_camion_site foreign key (noSite) references site(noSite)
 );
 
 create table tournee
-(noTournee	 number DEFAULT seq_tournee.NEXTVAL,
+(noTournee	 number(6) not null,
 dateTournee	 date,
 noImmatric	 char(10) not null,
 noEmploye	 number(5) not null,
@@ -120,7 +109,7 @@ constraint FK_tournee_employe foreign key (noEmploye) references employe(noEmplo
 );
 
 create table demande
-(noDemande	 number DEFAULT seq_demande.NEXTVAL,
+(noDemande	 number(6) not null,
 dateDemande	 date,
 dateEnlevement	 date,
 aTraiter	 number(1) DEFAULT 0,
@@ -170,6 +159,14 @@ constraint FK_detaildep_centre foreign key (noCentre) references centretraitemen
 );
 
 
-
-
-
+-- création de séquences
+create sequence seq_typedechet start with 1 increment by 1;
+create sequence seq_marque start with 1 increment by 1;
+create sequence seq_modele start with 1 increment by 1;
+create sequence seq_site start with 1 increment by 1;
+create sequence seq_ville start with 1 increment by 1;
+create sequence seq_fonction start with 1 increment by 1;
+create sequence seq_employe start with 1 increment by 1;
+create sequence seq_tournee start with 1 increment by 1;
+create sequence seq_demande start with 1 increment by 1;
+create sequence seq_centre start with 1 increment by 1;
