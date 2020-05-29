@@ -1,0 +1,25 @@
+12345678900001;Energym;10;Boulevard de Pontoise;0134205236;Mme servant;5
+23456789010002;La cle des champs;18;Rue des Nouvelles;0135615879;M Fourdan;6
+34567890120003;Formalys;145;rue des Allouettes;0136579321;M Cresdon;7
+48334367900013;Cartoooche;84;avenue de la Republique;0135201895;M Dun;8
+39116278100044;Propack;140;rue du faubourg Saint Honore;0135206598;M Corall;8
+38221444300014;Mavick;32;rue du General Beuret;0136548790;M Dravick;8
+38310924600025;Aqualia;26;rue Nicolai;0135659875;M Brilat;8
+33041607400038;Perenco;7;rue de logelbach;0135879632;Mme Vandenberck;8
+41167102700059;Caroil;51;rue Anjou;0135647562;M Durand;8
+38238166300014;Atelier Joel;135;Boulevard de Sebastopol;0136546874;M Fractur;8
+33364631300010;Ciambelli;12;rue Dauphine;0135213258;M Dactibne;8
+41392116400013;Antada;3;rue du colonel Moll;0134542655;M Martin;8
+42382805200013;AJLC;18;rue Saint Ferdinand;0135213265;Mme Lutin;8
+38248452500037;Tyfatou;103;rue de Rennes;0135213658;M Detallis;8
+38219696200064;Arkanorum;27;rue de Linne;0134206741;Mme Lorginel;8
+123451320010012;Decathlon;25;Avenue Watrelos;0339275236;M Vanderelst;16
+024565590120057;Castorama;15;Rue des plages;0336215879;M Didire;15
+345655671230029;Toyota Motor;120;rue des Mirails;0356879321;Mme Crespin;14
+123487583650015;Dalkia France;45;Boulevard Marchand;0356865871;Mme Dreschler;13
+056483328350015;Selarl Despagne Maes;36;Rue des pyramides;0356766821;M Despadre;9
+125879255760011;Lunginnov;36;Rue dix bars;0355676354;M Attaf;9
+564712357860012;Yassin Attof;44;Avenue Marx Dormoy;0356246387;M Yassin Attof;9
+546258732150011;Le moulin meunier;15;Rue de Tournai;0365322522;M Meunier;9
+235463322450016;Eole;61;Avenue du peuple Belge;0323543325;M Duperche;9
+554821876540036;Armel;22;Place des Reignaux;0331256484;M Yakamoz;9

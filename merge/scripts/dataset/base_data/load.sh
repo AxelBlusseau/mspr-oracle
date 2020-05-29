@@ -1,0 +1,15 @@
+sqlldr recycl/recycl ville.ctl
+sqlldr recycl/recycl site.ctl
+sqlldr recycl/recycl marque.ctl
+sqlldr recycl/recycl modele.ctl
+sqlldr recycl/recycl camion.ctl
+sqlldr recycl/recycl fonction.ctl
+sqlldr recycl/recycl employe.ctl
+sqlldr recycl/recycl centre.ctl
+sqlldr recycl/recycl typedechet.ctl
+sqlldr recycl/recycl entreprise.ctl
+sqlldr recycl/recycl tournee.ctl
+sqlldr recycl/recycl demande.ctl
+sqlldr recycl/recycl detaildemande.ctl
+sqlldr recycl/recycl detaildepot.ctl
+sqlldr recycl/recycl detailcollecte.ctl

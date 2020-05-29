@@ -23,7 +23,7 @@ constraint PK_fonction primary key(noFonction)
 create table ville
 (noVille 	 number DEFAULT seq_ville.NEXTVAL,
 ville		 varchar(50) not null,
-zip		 varchar(5) not null,
+zip		 varchar(10) not null,
 constraint PK_ville primary key(noVille)
 );
 

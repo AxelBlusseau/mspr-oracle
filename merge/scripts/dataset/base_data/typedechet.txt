@@ -1,0 +1,12 @@
+;Papier;0;10;m3;13;16
+;Verre;1;10;m3;40;50
+;Plastique;0;10;m3;20;25
+;Luminaires;1;10;10 pces;30;40
+;Piles;2;10;300 pces;10;20
+;Encre;0;10;5L;12;25
+;Metal;0;10;m3;50;70;
+;Dechets verts;0;10;m3;10;17
+;Gravats;0;10;m3;30;45
+;Appareils electriques;2;10;10 pces;20;32
+;Huile et peinture;5;10;5L;12;25
+;Aerosols;5;10;10 pces;20;32
