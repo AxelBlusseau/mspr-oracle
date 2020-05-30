@@ -6,8 +6,8 @@ Pontoise;95000
 Vauréal;95490
 Saint Germain;78000
 Paris;75000
-Lille;59000
-Loos;59800
+Lille;59800
+Loos;59000
 Bondues;59910
 Tourcoing;59200
 Saint André les Lille;59350

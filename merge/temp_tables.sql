@@ -52,7 +52,6 @@ create table tournee_merge
 
 
  -- sans Web_O_N / ATT chargem table
-/*
 create table demande_merge
 (
     NoDemande	 number(6) not null,
@@ -75,7 +74,7 @@ create table demande_merge
 -- =====================
 
 -- avec remarque /  ATT : chargement table
-
+/*
 create table detaildemande_merge
 (
     QuantiteEnlevee	 number(3) not null,
