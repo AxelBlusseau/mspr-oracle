@@ -74,7 +74,7 @@ create table demande_merge
 -- =====================
 
 -- avec remarque /  ATT : chargement table
-/*
+
 create table detaildemande_merge
 (
     QuantiteEnlevee	 number(3) not null,
@@ -82,40 +82,27 @@ create table detaildemande_merge
     NoDemande		 number(6) not null,
     NoTypeDechet     number(3) not null,
     
-    NoDemande_merge number(6),
-    NoTypeDechet_merge number(3),
-    
     constraint PK_detaildemande_merge primary key(NoDemande, NoTypeDechet), 
     constraint FK_detaildem_demande_merge foreign key (NoDemande) references demande_merge(NoDemande),
-    constraint FK_detaildem_typedech_merge foreign key (NoTypeDechet) references typedechet(NoTypeDechet),
-    
-    constraint FK_detaildemande_merge_demande foreign key (NoDemande_merge) references detaildemande(NoDemande),
-    constraint FK_detaildemande_merge_type foreign key (NoTypeDechet_merge) references detaildemande(NoTypeDechet)
+    constraint FK_detaildem_typedech_merge foreign key (NoTypeDechet) references typedechet(NoTypeDechet)
 );
 
 create table detaildepot_merge
 (
     QuantiteDeposee	 number(3) not null,
+    Remarque		 varchar(100),
     NoTournee		 number(6) not null,
     NoTypeDechet		 number(3) not null,
     NoCentre		 number(3) not null,
     
-    NoTournee_merge		 number(6) not null,
-    NoTypeDechet_merge		 number(3) not null,
-    NoCentre_merge		 number(3) not null,
-    
     constraint PK_detaildepot_merge primary key(NoTournee, NoTypeDechet, NoCentre),
     constraint FK_detaildep_tournee_merge foreign key (NoTournee) references tournee_merge(NoTournee),
     constraint FK_detaildep_typedech_merge foreign key (notypedechet) references typedechet(notypedechet),
-    constraint FK_detaildep_centre_merge foreign key (NoCentre) references centretraitement_merge(NoCentre),
-    
-    constraint FK_detaildep_merge_tournee foreign key (NoTournee_merge) references detaildepot(NoTournee),
-    constraint FK_detaildep_merge_type foreign key (NoTypeDechet_merge) references detaildepot(NoTypeDechet),
-    constraint FK_detaildep_merge_centre foreign key (NoCentre_merge) references detaildepot(NoCentre)
+    constraint FK_detaildep_centre_merge foreign key (NoCentre) references centretraitement_merge(NoCentre)
 );
-*/
 
--- cr�ation de s�quences
+
+-- crï¿½ation de sï¿½quences
 create sequence seq_typedechet_merge start with 1 increment by 1;
 create sequence seq_centre_merge start with 1 increment by 1;
 create sequence seq_employe_merge start with 1 increment by 1;
