@@ -21,11 +21,7 @@ La base de données est maintenant alimentée grâce aux scripts executant des c
 ## Migration des données
 
 Les scripts de PLSQL de migration se situe dans le dossier merge et sont nommés par le nom de la table concernée. 
-Veuillez exécuter les scripts dans cet ordre précis :
 
-- employe.sql
-- centre.sql
-- tournee.sql
-- demande.sql
-- detaildemandecollecte.sql
-- detaildepot.sql
+
+
+docker cp ./merge_data/ oracle:/home/oracle/toload/RECYCL/merge_data
