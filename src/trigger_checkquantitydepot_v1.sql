@@ -28,5 +28,9 @@ BEGIN
     IF QUANTITEE_TOTALE_DEPOT + :NEW.QUANTITEDEPOSEE > QUANTITEE_TOTALE_TOURNEE THEN
         RAISE QUANTITEE_EXCEPTION;
     END IF;
+
+    EXCEPTION
+        WHEN QUANTITEE_EXCEPTION
+            THEN RAISE_APPLICATION_ERROR(-20001, 'La quantité du dépôt pour ce type de déchêt est supérieur à la quantité récoltée pendant la tournée');
     
 END;
